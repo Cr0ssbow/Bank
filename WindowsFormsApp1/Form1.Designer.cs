@@ -42,36 +42,36 @@ namespace WindowsFormsApp1
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(668, 42);
+            this.metroButton1.Location = new System.Drawing.Point(686, 42);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.Size = new System.Drawing.Size(75, 75);
             this.metroButton1.TabIndex = 0;
             this.metroButton1.Text = "Добавить";
             this.metroButton1.UseSelectable = true;
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(749, 94);
+            this.metroButton2.Location = new System.Drawing.Point(506, 360);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.Size = new System.Drawing.Size(156, 32);
             this.metroButton2.TabIndex = 1;
             this.metroButton2.Text = "Снять";
             this.metroButton2.UseSelectable = true;
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(668, 94);
+            this.metroButton3.Location = new System.Drawing.Point(23, 360);
             this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(75, 23);
+            this.metroButton3.Size = new System.Drawing.Size(156, 32);
             this.metroButton3.TabIndex = 5;
-            this.metroButton3.Text = "Добавить";
+            this.metroButton3.Text = "Положить на счет";
             this.metroButton3.UseSelectable = true;
             // 
             // metroButton4
             // 
-            this.metroButton4.Location = new System.Drawing.Point(749, 42);
+            this.metroButton4.Location = new System.Drawing.Point(767, 42);
             this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(75, 23);
+            this.metroButton4.Size = new System.Drawing.Size(75, 75);
             this.metroButton4.TabIndex = 6;
             this.metroButton4.Text = "Удалить";
             this.metroButton4.UseSelectable = true;
@@ -91,7 +91,7 @@ namespace WindowsFormsApp1
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(639, 23);
             this.metroLabel2.TabIndex = 11;
-            this.metroLabel2.Text = "Денег на счёте";
+            this.metroLabel2.Text = "Сумма";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroTextBox1
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(23, 193);
+            this.listBox1.Location = new System.Drawing.Point(23, 143);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(639, 199);
             this.listBox1.TabIndex = 15;

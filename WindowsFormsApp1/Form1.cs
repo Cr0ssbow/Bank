@@ -21,9 +21,6 @@ namespace WindowsFormsApp1
         {
 
         }
-        class Check
-        {
 
-        }
     }
 }
