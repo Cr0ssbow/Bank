@@ -48,5 +48,15 @@ namespace WindowsFormsApp1
             if (metroTextBox2.Text != "")
                 listBox1.Items.Add(metroTextBox2.Text);
         }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            //Положить на счёт
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            //снять со счёта
+        }
     }
 }

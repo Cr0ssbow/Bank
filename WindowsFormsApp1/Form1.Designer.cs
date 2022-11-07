@@ -59,6 +59,7 @@ namespace WindowsFormsApp1
             this.metroButton2.TabIndex = 1;
             this.metroButton2.Text = "Снять";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton3
             // 
@@ -68,6 +69,7 @@ namespace WindowsFormsApp1
             this.metroButton3.TabIndex = 5;
             this.metroButton3.Text = "Положить на счет";
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // metroButton4
             // 
