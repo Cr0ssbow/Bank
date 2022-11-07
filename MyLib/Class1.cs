@@ -2,29 +2,22 @@
 
 namespace MyLib
 {
-  public class AccEvent
+ 
+  public class ClassAcc
   {
-    public string Massage { get;}
-    public int sum { get;}
-    public AccEvent(string massage, int sum)
-    {
-      Massage = massage;
-      Sum = sum;
-    }
-  }
-  public class Account
-  {
-       public delegate void Acc(string massage);
-       public delegate void Event(Acc a, AccEvent b);
+       public delegate void Account(string massage);
+       public delegate void Event(ClassAcc a, EventAcc b);
        public event Event Notify;
-       Acc account;
+       Account acc;
+       private string fio;
+       private int sum;
        public int Sum { get => sum; set => sum = value; }
-       public string Fio { get => fio; set => Fio = value; }
-       public void Processing(Acc del)
+       public string Fio { get => fio; set => fio = value; }
+       public void Processing(Account del)
        {
-            account = del;
+            acc = del;
        }
-       public void AccountClass(int sum, string fio)
+       public void AccClass(int sum, string fio)
        {
             Fio = fio;
             Sum = sum;
@@ -35,13 +28,24 @@ namespace MyLib
             {
                 Sum -= sum;
             }
-            acc?.Invoke($"Списание со счёта произошло успешно. Ваш баланс: {Sum} рублей.");
-            Notify?.Invoke(this, new AccEvent($"Списание со счёта {sum}",sum));
-            else (Sum <= sum);
-            {
-                acc?.Invoke($"Недостаточно средств. Ваш баланс: {Sum} рублей.");
-                Notify?.Invoke(this, new AccEvent($"Недостаточно средств {sum}", sum));
-            }
+            acc?.Invoke($"Списание {sum} со счёта произошло успешно. Ваш баланс: {Sum} рублей.");
+            Notify?.Invoke(this, new EventAcc($"Списание со счёта {sum}",sum));
        }
-  }
+       public void Plase(int sum)
+       {
+            Sum += sum;
+            acc?.Invoke($"Зачисление {sum} на счёт произошло успешно. Ваш баланс: {Sum} рублей.");
+            Notify?.Invoke(this, new EventAcc($"Зачисление {sum} рублей", sum));
+       }
+        public class EventAcc
+        {
+            public string Massage { get; }
+            public int Sum { get; }
+            public EventAcc(string massage, int sum)
+            {
+                Massage = massage;
+                Sum = sum;
+            }
+        }
+    }
 }

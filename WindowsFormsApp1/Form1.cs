@@ -22,5 +22,31 @@ namespace WindowsFormsApp1
 
         }
 
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void metroTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            if (metroTextBox1.Text != "")
+                listBox1.Items.Add(metroTextBox1.Text);
+            if (metroTextBox2.Text != "")
+                listBox1.Items.Add(metroTextBox2.Text);
+        }
     }
 }

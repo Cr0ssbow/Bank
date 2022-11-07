@@ -38,16 +38,18 @@ namespace WindowsFormsApp1
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(686, 42);
+            this.metroButton1.Location = new System.Drawing.Point(679, 39);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 75);
+            this.metroButton1.Size = new System.Drawing.Size(75, 35);
             this.metroButton1.TabIndex = 0;
             this.metroButton1.Text = "Добавить";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroButton2
             // 
@@ -69,12 +71,13 @@ namespace WindowsFormsApp1
             // 
             // metroButton4
             // 
-            this.metroButton4.Location = new System.Drawing.Point(767, 42);
+            this.metroButton4.Location = new System.Drawing.Point(679, 82);
             this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(75, 75);
+            this.metroButton4.Size = new System.Drawing.Size(75, 35);
             this.metroButton4.TabIndex = 6;
             this.metroButton4.Text = "Удалить";
             this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
             // 
             // metroLabel1
             // 
@@ -131,6 +134,7 @@ namespace WindowsFormsApp1
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(639, 199);
             this.listBox1.TabIndex = 15;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // metroTextBox2
             // 
@@ -161,12 +165,24 @@ namespace WindowsFormsApp1
             this.metroTextBox2.UseSelectable = true;
             this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox2.Click += new System.EventHandler(this.metroTextBox2_Click);
+            // 
+            // metroButton5
+            // 
+            this.metroButton5.Location = new System.Drawing.Point(771, 385);
+            this.metroButton5.Name = "metroButton5";
+            this.metroButton5.Size = new System.Drawing.Size(75, 29);
+            this.metroButton5.TabIndex = 17;
+            this.metroButton5.Text = "Закрыть";
+            this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 415);
+            this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.metroTextBox1);
@@ -176,6 +192,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -193,6 +210,7 @@ namespace WindowsFormsApp1
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private System.Windows.Forms.ListBox listBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroButton metroButton5;
     }
 }
 
