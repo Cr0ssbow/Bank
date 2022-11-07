@@ -47,5 +47,5 @@ namespace MyLib
                 Sum = sum;
             }
         }
-    }
+  }
 }
